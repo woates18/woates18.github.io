@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Meybi';
+    src: url('meybi/Meybi Demo.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(IMAGES/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.title-container {
+    background-color: white;
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+.title-container h1 {
+    color: black;
+    font-family: 'Meybi', cursive;
+    font-size: 136px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.buffer {
+    width: 2%; /* Adjust as needed */
+}
+
+.spotify-logo {
+    width: 40%;
+    margin-left: 25%;
+    border: 2px solid black;
+}
+
+.spotify-logo img {
+    width: 100%;
+    height: auto;
+}
+
+
+.slideshow-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 185, 185);
+    border: 2px solid black;
+    text-align: center;
+    position: relative;
+}
+
+.mySlides {
+    width: 90%;
+    margin: 0 auto;
+    display: none;
+    padding: 5%;
+
+}
+
+
+.mySlides img {
+    width: auto;
+    max-width: 100%;
+    border: 5px solid rgb(194, 0, 0);
+}
+
+#startingSlide {
+    width: 100%;
+}
+.caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 10%;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#leftArrow, #rightArrow {
+    width: 100%;
+    border: 5px solid black;
+}
+
+.prev {
+    left: 0;
+    margin-left: -35%;
+    width: 25%;
+    padding: 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    margin-right: -35%;
+    width: 25%;
+    padding: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
+
+.middle-section {
+    width: 50%;
+    height: 100vh;
+    padding: 20px;
+}
+
+.left-section, .right-section {
+    width: 20%;
+    padding: 20px;
+}
+
+.container > * {
+    margin: 10px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slideshow with Text Descriptions</title>
+  <link rel="stylesheet" type="text/css" href="CSS.css">
+</head>
+<body>
+
+<div class="title-container">
+  <h1>Celebrating One Year Together!</h1>
+</div>
+
+<div class="container">
+    <div class="left-section">
+    <div class="spotify-logo">
+        <a href="https://open.spotify.com/playlist/3L6ObSAkXtbRjIdxznijid?si=1360a48a46f24c12">
+            <img src="IMAGES/spotifyLogo.png" alt="Spotify Link">
+        </a>
+    </div>
+    </div>
+  
+  <div class="middle-section">
+    <div class="slideshow-container">
+
+      <!-- Image slides -->
+        <div class="mySlides">
+            <img src="IMAGES/startingSlide.png" alt="Image 3" id="startingSlide">
+            <div class="caption">Description for Image 3</div>
+        </div>
+        <div class="mySlides">
+            <img src="IMAGES/music tastes.PNG" alt="Music Tastes">
+            <div class="caption">Description for Image 2</div>
+        </div>
+
+      <!-- Previous and Next buttons -->
+      <a class="prev" onclick="plusSlides(-1)">
+        <img id="leftArrow" src="IMAGES/leftArrow.png" alt="left Arrow">        
+      </a>
+      <a class="next" onclick="plusSlides(1)">
+        <img id="rightArrow" src="IMAGES/rightArrow.png" alt="right Arrow">
+      </a>
+    </div>
+  </div>
+  
+  <div class="right-section">
+    <!-- Blank Section -->
+  </div>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var captions = document.getElementsByClassName("caption");
+
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      captions[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+    captions[slideIndex - 1].style.display = "block";
+  }
+</script>
+
+</body>
+</html>
